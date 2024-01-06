@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* @layer components {
+    .container {
+        @apply w-[65rem] mx-auto  overflow-hidden;
+    }
+} */
+
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+    .container {
+      @apply w-[65rem] mx-auto bg-[#18c479] overflow-hiden
+    }
+  } */
+
+

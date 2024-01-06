@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    background-color: black;
+}
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.zxcv {
+    clip-path: polygon(0 48%, 60% 47%, 61% 73%, 71% 81%, 60% 80%, 0% 80%);
+    background-color: aqua;
+    height: 100%;
+    /* Ensure the height is 100% to cover the entire clipped area */
+    display: flex;
+    /* Center the text horizontally and vertically */
+    align-items: center;
+    justify-content: center;
+}
+
+.signUpForm2 {
+    background: rgb(171, 170, 170);
+    background: linear-gradient(90deg, rgba(171, 170, 170, 1) 0%, rgba(250, 249, 249, 1) 50%, rgba(171, 170, 170, 1) 100%);
+}
+
+
+
+.signUpForm {
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+
+.formBackground {
+    padding: 12px 14px;
+    background-color: transparent;
+    /* backdrop-filter: blur(5px); */
+    /* background-color: #0000004d; */
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+.innershadow {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.chatMessage {
+    padding: 4px 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.chatMessageOther {
+    border-radius: 12px 12px 12px 0px;
+}
+
+.chatMessageMe {
+    border-radius: 12px 12px 0px 12px;
+}
+
+.box {
+    box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+}
+

@@ -17,6 +17,9 @@ app.use(cors());
 app.use('/api/auth', auth)
 app.use('/api/chat', chat)
 app.use('/api/message', message)
+app.use('/', (req,res) =>{
+    res.send("Server is running")
+})
 
 mongoose.connect(process.env.MONGO_URL).then(() => console.log('Data base  Connected'));
 

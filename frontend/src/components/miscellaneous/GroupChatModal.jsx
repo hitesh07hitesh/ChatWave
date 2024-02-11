@@ -152,7 +152,7 @@ const GroupChatModal = ({ children }) => {
 
                 <div className="fixed inset-0 z-50 flex items-center justify-center">
 
-                    <div className="absolute inset-0   backdrop-blur-lg text-white fontbold">
+                    <div className="absolute inset-0   backdrop-blur-lg text-white fontbold"  onClick={() => { setIsOpen(false) }}>
 
                     </div>
                     <div className="relative bg-[#0000004d] p-4 max-w-lg rounded">

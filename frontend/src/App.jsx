@@ -18,9 +18,6 @@ function App() {
     const intervalId = setInterval(() => {
       setGradient(prevGradient => {
         const newGradient = increasing ? prevGradient + 1 : prevGradient - 1;
-
-        // console.log(newGradient);
-
         if (newGradient === 85) {
           setIncreasing(false);
         } else if (newGradient === 15) {
@@ -36,7 +33,7 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setGradientDegree((prevDegree) => (prevDegree + 2) % 360);
+      setGradientDegree((prevDegree) => (prevDegree + 1) % 360);
     }, 50);
 
     return () => clearInterval(interval);

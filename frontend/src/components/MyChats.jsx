@@ -25,15 +25,6 @@ const MyChats = ({ fetchAgain }) => {
             console.log(response.data);
             setChats(response.data)
 
-
-            // const config = {
-            //     headers: {
-            //         Authorization: `Bearer ${user.token}`,
-            //     },
-            // };
-
-            // const { data } = await axios.get("http://127.0.0.1:5000/api/chat", config);
-            // setChats(data);
         } catch (error) {
             Toastify({
                 text: "Failed to fetech chats",

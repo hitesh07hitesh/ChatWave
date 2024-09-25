@@ -22,7 +22,7 @@ const SignUp = () => {
         email: "",
         password: "",
         gender: "",
-        image: previewURL,
+        pic: previewURL,
     })
 
 
@@ -66,7 +66,7 @@ const SignUp = () => {
         const data = await uploadImageToCloudinary(file)
         setPreviewURL(data.url)
         setSelectedFile(data.url)
-        setformData({ ...formData, image: data.url })
+        setformData({ ...formData, pic: data.url })
         e.preventDefault()
     }
 
@@ -281,12 +281,12 @@ const SignUp = () => {
                                 </div>
                             </fieldset>
                             <div className="relative overflow-hidden inline-block flex-col">
-                                <label className='mb-1 text-white' htmlFor="image">Profile picture</label>
+                                <label className='mb-1 text-white' htmlFor="pic">Profile picture</label>
                                 <div className='flex gap-2'>
                                     {selectedFile && (<img className='my-auto  h-[2.5rem] w-[2.5rem] rounded-[2.5rem] object-cover' src={selectedFile} alt="Img" />)}
 
                                     <button className="w-fit border-2 border-gray-300 text-white bg-[#01000c1f]  hover:bg-[#0200244a] px-8 py-2 rounded-lg text-lg font-bold">Upload a file</button>
-                                    <input type="file" name="image" accept='.jpg, .png' onChange={handelFileInputChange} className="text-[100px] absolute left-0 top-0 opacity-0" />
+                                    <input type="file" name="pic" accept='.jpg, .png' onChange={handelFileInputChange} className="text-[100px] absolute left-0 top-0 opacity-0" />
                                 </div>
 
                             </div>

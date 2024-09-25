@@ -5,9 +5,10 @@ const cors = require("cors");
 const auth = require('./Router/auth')
 const chat = require('./Router/chat')
 const message = require('./Router/message')
-const env = require('dotenv').config()
+const dotenv = require('dotenv')
 
 const app = express()
+dotenv.config();
 
 const PORT = process.env.PORT || 2000
 
@@ -17,11 +18,13 @@ app.use(cors());
 app.use('/api/auth', auth)
 app.use('/api/chat', chat)
 app.use('/api/message', message)
-app.use('/', (req,res) =>{
+app.use('/', (req, res) => {
     res.send("Server is running")
 })
 
-mongoose.connect(process.env.MONGO_URL).then(() => console.log('Data base  Connected'));
+mongoose.connect(process.env.MONGO_URL, {
+    dbName: 'ChatWave'
+}).then(() => console.log('Data base  Connected'));
 
 const server = app.listen(PORT, () => {
     console.log(`Server is runnint at http://127.0.0.1:${PORT}`)

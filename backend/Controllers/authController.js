@@ -9,7 +9,7 @@ const generateToken = (id) => {
 
 const register = async (req, res) => {
     try {
-        const { name, username, email, password, gender, image } = req.body;
+        const { name, username, email, password, gender, pic } = req.body;
 
         if (!name || !username || !email || !password || !gender) {
             return res.status(400).json({ Message: "Please Enter all the Fields" });
@@ -28,7 +28,7 @@ const register = async (req, res) => {
         }
 
         const user = await User.create({
-            name, username, email, password, gender, image
+            name, username, email, password, gender, pic
         });
 
         return res.status(201).json({
